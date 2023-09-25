@@ -1,0 +1,9 @@
+.notFoundContainer {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.notFoundTitle {
+  font-size: 48px;
+}

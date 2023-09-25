@@ -1,0 +1,116 @@
+.homeContainer {
+  padding: 20px;
+  /* background: blue; */
+}
+
+.phoneContainer {
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 12px;
+  width: 90%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.productContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 25%;
+}
+.productImg {
+  width: 190px;
+  height: 230px;
+}
+.sidebarListContainer {
+  display: flex;
+}
+.listContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+.loading {
+  font-size: 48px;
+}
+.elementsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  /* column-gap: 20px; */
+}
+.productsHeader {
+  font-size: 36px;
+}
+.addToCart {
+  padding: 8px;
+  background-color: #4b70e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.addToCart:hover {
+  background-color: #4b71e2d6;
+}
+.price {
+  font-weight: bolder;
+}
+h3,
+h4 {
+  font-weight: 500;
+}
+.productName {
+  cursor: pointer;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+.sidebar {
+  margin-right: 20px;
+}
+.buttonsList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  position: sticky;
+  top: 100px;
+}
+.buttonsList button {
+  border: none;
+  padding: 6px 10px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+  background: none;
+  color: black;
+  cursor: pointer;
+  width: 90px;
+}
+.buttonsList .active {
+  background-color: #4b70e2;
+  color: white;
+}
+.buttonsList button:hover {
+  background-color: #4b71e2d6;
+  color: white;
+}
+.solid2 {
+  border-top: 1px solid rgb(212, 208, 208);
+  margin-right: 10px;
+}
+.solid3 {
+  border-top: 1px solid rgb(212, 208, 208);
+  width: 100%;
+}
+@media only screen and (width< 600px) {
+}
