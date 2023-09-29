@@ -7,8 +7,7 @@ const store = configureStore({
   reducer: {
     products: productsReducer,
     cart: cartReducer,
-    search: searchSlice,
-    singleProduct: singleProductSlice,
+    search: searchSlice
   },
 });
 
