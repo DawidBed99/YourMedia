@@ -1,6 +1,6 @@
-# YourPhone
+# YourMedia
 
-* This is YourPhone, application made by Dawid Bednarz for redux training purposes
+* This is YourMedia, application made by Dawid Bednarz for redux training purposes
 
 ## Functionality
 * Displaying products in shop
