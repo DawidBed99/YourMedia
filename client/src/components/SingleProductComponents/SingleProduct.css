@@ -1,0 +1,171 @@
+.singleProductContainer {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+.singleProductElements {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-width: 500px;
+}
+.singleProductName {
+  font-size: 18px;
+}
+.solid_single {
+  border-top: 5px solid rgb(212, 208, 208);
+  margin-bottom: 20px;
+}
+.addToCartSingle {
+  padding: 8px;
+  background-color: #4b70e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: center;
+}
+.singlePrice {
+  font-weight: bolder;
+  font-size: 16px;
+}
+.singleProductImgContainer {
+  padding: 10px;
+}
+.singleProductImage {
+  width: 300px;
+  height: 230px;
+}
+.gallery ul {
+  list-style: none;
+}
+.gallery {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+.gallery li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.gallery button {
+  background: none;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+}
+.galleryMiniImg {
+  width: 50px;
+  height: 39px;
+}
+.upperContainer {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.descriptionContaniner h3 {
+  font-size: 16px;
+}
+.aboutContainer {
+  padding: 10px;
+}
+.aboutContainer h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.aboutList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+.aboutList li {
+  text-align: left;
+}
+tbody td {
+  text-align: left;
+  padding: 12px;
+  background: rgb(230, 230, 230);
+}
+.firstCell {
+  width: 45%;
+}
+table {
+  width: 100%;
+}
+.specificationContainer {
+  width: 600px;
+}
+table th {
+  font-size: 24px;
+}
+@media only screen and (width< 960px) {
+  .upperContainer {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+@media only screen and (width< 640px) {
+  .specificationContainer {
+    width: 400px;
+  }
+}
+@media only screen and (width< 490px) {
+  .specificationContainer {
+    width: 300px;
+  }
+  .gallery {
+    flex-direction: column-reverse;
+  }
+  .gallery li {
+    display: inline;
+  }
+  .galleryMiniImg {
+    width: 40px;
+    height: 31px;
+    margin-right: 6px;
+  }
+}
+@media only screen and (width< 300px) {
+  .specificationContainer {
+    width: 250px;
+    font-size: 12px;
+  }
+  .aboutContainer,
+  .singleProductName,
+  .descriptionContaniner h3,
+  .singlePrice {
+    font-size: 12px;
+  }
+  .gallery {
+    flex-direction: column-reverse;
+  }
+  .gallery li {
+    display: inline;
+  }
+  .galleryMiniImg {
+    width: 36px;
+    height: 28px;
+    margin-right: 2px;
+  }
+  .singleProductImage {
+    width: 250px;
+    height: 192px;
+  }
+}

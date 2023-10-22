@@ -1,0 +1,406 @@
+.welcomeContainer {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.imagesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+.tabletImg {
+  width: 600px;
+  height: 300px;
+  transition: all 100ms ease-in-out;
+}
+
+.phonesImg {
+  width: 451px;
+  height: 300px;
+  transition: all 100ms ease-in-out;
+}
+.laptopsImg {
+  width: 1050px;
+  height: 557px;
+  transition: all 100ms ease-in-out;
+}
+.tabletContainer {
+  cursor: pointer;
+  display: flex;
+  width: 560px;
+  height: 280px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+.productImgTrending {
+  width: 160px;
+  height: 193px;
+}
+.productImgWelcome {
+  width: 170px;
+  height: 193px;
+}
+.backgroundTablet {
+  width: 560px;
+  height: 280px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.backgroundTablet:hover,
+.backgroundLaptop:hover,
+.backgroundPhone:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.tabletContainer h3,
+.phoneContainerWelcome h3,
+.laptopContainer h3 {
+  font-size: 32px;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.phoneContainerWelcome {
+  cursor: pointer;
+  display: flex;
+  width: 420px;
+  height: 280px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+.backgroundPhone {
+  width: 420px;
+  height: 280px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.laptopContainer {
+  cursor: pointer;
+  display: flex;
+  width: 1000px;
+  height: 530px;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.backgroundLaptop {
+  width: 1000px;
+  height: 530px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.horizonContainer {
+  display: flex;
+  gap: 20px;
+}
+.topProducts {
+  margin-top: 80px;
+  max-width: 1000px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.topProducts h2 {
+  margin-bottom: 30px;
+}
+.topProductsContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-basis: 25%;
+  gap: 20px;
+}
+.phoneElementContainerWelcome,
+.trendingElementContainer {
+  /* border-radius: 12px; */
+  width: 100%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin-bottom: 30px;
+  flex-basis: 20%;
+  /* transition: all 0.18s ease-in-out; */
+  cursor: pointer;
+  padding: 10px;
+}
+.phoneElementContainerWelcome {
+  border-bottom: solid gray 2px;
+}
+.phoneElementContainerWelcome:hover {
+  border-bottom: solid #4b70e2 2px;
+}
+.phoneElementContainerWelcome:hover,
+.trendingElementContainer:hover {
+  /* box-shadow: rgba(27, 31, 35, 0.15) 0px 0px 0px 1.5px; */
+  text-decoration: underline;
+  color: #4b70e2;
+}
+.productContainerWelcome {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 25%;
+}
+
+.welcomeProductsDescription {
+  max-width: 1000px;
+  margin-top: 80px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  background: linear-gradient(rgb(255, 255, 255) 1%, rgb(150, 203, 244) 99%);
+}
+.descriptionImage {
+  width: 50%;
+  height: 311px;
+}
+.welcomeProductsDescription img {
+  width: 100%;
+  height: 311px;
+  object-fit: cover;
+}
+.descText {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.descText button {
+  padding: 8px;
+  font-size: 18px;
+  background: black;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+.descText button:hover {
+  background: rgb(75, 74, 74);
+}
+.trendingContainer {
+  margin-top: 80px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.trendingHeader {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.trendingButtons {
+  display: flex;
+  gap: 10px;
+}
+.trendingButtons button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  border: none;
+  background: black;
+  color: white;
+  height: 30px;
+  cursor: pointer;
+}
+.trendingButtons button:hover {
+  background: rgb(75, 74, 74);
+}
+.trendingItems {
+  width: 960px;
+  display: flex;
+  gap: 80px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  border: solid gray 1px;
+  border-radius: 32px;
+}
+@media only screen and (width< 1300px) {
+  .tabletImg {
+    width: 400px;
+    height: 200px;
+  }
+
+  .phonesImg {
+    width: 300px;
+    height: 200px;
+  }
+  .laptopsImg {
+    width: 720px;
+    height: 382px;
+  }
+  .tabletContainer,
+  .backgroundTablet {
+    width: 380px;
+    height: 180px;
+  }
+  .phoneContainerWelcome,
+  .backgroundPhone {
+    width: 280px;
+    height: 180px;
+  }
+  .laptopContainer,
+  .backgroundLaptop {
+    width: 680px;
+    height: 352px;
+  }
+  .trendingItems {
+    width: 700px;
+  }
+}
+@media only screen and (width< 785px) {
+  .tabletImg {
+    width: 300px;
+    height: 150px;
+  }
+
+  .phonesImg {
+    width: 200px;
+    height: 150px;
+  }
+  .laptopsImg {
+    width: 520px;
+    height: 276px;
+  }
+  .tabletContainer,
+  .backgroundTablet {
+    width: 280px;
+    height: 130px;
+  }
+  .phoneContainerWelcome,
+  .backgroundPhone {
+    width: 180px;
+    height: 130px;
+  }
+  .laptopContainer,
+  .backgroundLaptop {
+    width: 480px;
+    height: 225px;
+  }
+  .tabletContainer h3,
+  .phoneContainerWelcome h3,
+  .laptopContainer h3 {
+    font-size: 22px;
+  }
+  .welcomeProductsDescription {
+    flex-direction: column;
+    align-items: center;
+  }
+  .descriptionImage {
+    width: 100%;
+    height: 311px;
+  }
+  .trendingItems {
+    width: 440px;
+  }
+}
+@media only screen and (width< 510px) {
+  .tabletImg {
+    width: 200px;
+    height: 100px;
+  }
+  .phonesImg {
+    width: 150px;
+    height: 100px;
+  }
+  .laptopsImg {
+    width: 350px;
+    height: 186px;
+  }
+  .tabletContainer,
+  .backgroundTablet {
+    width: 180px;
+    height: 80px;
+  }
+  .phoneContainerWelcome,
+  .backgroundPhone {
+    width: 130px;
+    height: 80px;
+  }
+  .laptopContainer,
+  .backgroundLaptop {
+    width: 320px;
+    height: 146px;
+  }
+  .tabletContainer h3,
+  .phoneContainerWelcome h3,
+  .laptopContainer h3 {
+    font-size: 16px;
+  }
+  .imagesContainer {
+    gap: 10px;
+  }
+  .horizonContainer {
+    gap: 10px;
+  }
+  .topProductsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .phoneElementContainerWelcome {
+    width: 70%;
+    padding: 10px;
+  }
+  .trendingItems {
+    width: 180px;
+    margin-left: 0px;
+  }
+}
+@media only screen and (width< 300px) {
+  .tabletImg {
+    width: 150px;
+    height: 75px;
+  }
+  .phonesImg {
+    width: 112px;
+    height: 75px;
+  }
+  .laptopsImg {
+    width: 262px;
+    height: 139px;
+  }
+  .tabletContainer,
+  .backgroundTablet {
+    width: 130px;
+    height: 55px;
+  }
+  .phoneContainerWelcome,
+  .backgroundPhone {
+    width: 92px;
+    height: 55px;
+  }
+  .laptopContainer,
+  .backgroundLaptop {
+    width: 232px;
+    height: 110px;
+  }
+  .tabletContainer h3,
+  .phoneContainerWelcome h3,
+  .laptopContainer h3 {
+    font-size: 12px;
+  }
+}

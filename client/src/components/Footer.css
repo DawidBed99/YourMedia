@@ -1,0 +1,38 @@
+.footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 120px;
+  background-color: #4b70e2;
+  margin-top: auto;
+}
+.linksContainer {
+  gap: 30px;
+  display: flex;
+  justify-content: center;
+}
+.linksContainer a {
+  color: white;
+  font-size: 32px;
+  text-decoration: none;
+}
+.linksContainer a:hover {
+  text-decoration: underline;
+}
+@media only screen and (width< 760px) {
+  .linksContainer a {
+    font-size: 22px;
+  }
+}
+@media only screen and (width< 600px) {
+  .linksContainer {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+  }
+  .footer {
+    height: 200px;
+  }
+}

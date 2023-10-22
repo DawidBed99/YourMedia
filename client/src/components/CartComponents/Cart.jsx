@@ -10,7 +10,7 @@ import {
   decreaseQuantity,
   clearCart,
   getTotals,
-} from "../app/features/cartSlice";
+} from "../../app/features/cartSlice";
 const Cart = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -39,9 +39,18 @@ const Cart = () => {
         <hr className="solid" />
         <div className="cartItemContainer">
           <div className="cartProduct">
-            <img className="productImg" src={items.image} />
+            <img
+              className="productImgCart"
+              src={items.image}
+              onClick={() => navigate(`/product/${items.id}`)}
+            />
             <div className="cartItemDetails">
-              <h3>{items.name}</h3>
+              <h3
+                style={{ cursor: "pointer" }}
+                onClick={() => navigate(`/product/${items.id}`)}
+              >
+                {items.name}
+              </h3>
               <h4>{items.desc}</h4>
               <button
                 onClick={() => handleRemoveItemFromCart(items)}

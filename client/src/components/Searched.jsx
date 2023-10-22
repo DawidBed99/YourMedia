@@ -1,8 +1,9 @@
-import "./Home.css";
+import "./ProductsComponents/Home.css";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, getTotals } from "../app/features/cartSlice";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import ArrowBack from "@mui/icons-material/ArrowBack";
 const Home = () => {
   const navigate = useNavigate();
   const params = useParams();
@@ -15,7 +16,11 @@ const Home = () => {
   };
 
   const list = search.items2.map((product) => {
-    if (product.brand.toLowerCase() === params.name.toLowerCase()) {
+    if (
+      product.brand.toLowerCase() === params.name.toLowerCase() ||
+      product.type.toLowerCase() === params.name.toLowerCase() ||
+      product.name.toLowerCase().includes(params.name.toLowerCase())
+    ) {
       return (
         <div className="productContainer">
           <div className="phoneContainer" key={product.id}>
@@ -31,7 +36,10 @@ const Home = () => {
             <h4 className="price">${product.price}</h4>
             <img className="productImg" src={product.image} />
             <button
-              onClick={() => handleAddToCart(product)}
+              onClick={(e) => {
+                handleAddToCart(product);
+                e.stopPropagation();
+              }}
               className="addToCart"
             >
               Add to cart{" "}

@@ -1,9 +1,9 @@
-import "./Home.css";
+import "../ProductsComponents/Home.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { addToCart, getTotals } from "../app/features/cartSlice";
+import { addToCart, getTotals } from "../../app/features/cartSlice";
 import { useNavigate } from "react-router-dom";
-
+import MenuNav from "../MenuNav";
 const Home = () => {
   const products = useSelector((state) => state.products);
   const dispatch = useDispatch();
@@ -21,36 +21,37 @@ const Home = () => {
   const [disp, setDisp] = useState("All");
   const FILTER_MAP = {
     All: () => true,
-    iPhone: (phone) => phone.brand === "iPhone",
+    Apple: (phone) => phone.brand === "Apple",
     Samsung: (phone) => phone.brand === "Samsung",
     Nokia: (phone) => phone.brand === "Nokia",
   };
 
   const list = products.items.filter(FILTER_MAP[disp]).map((product) => {
-    return (
-      <div className="productContainer">
-        <div className="phoneContainer" key={product.id}>
-          <h3
-            className="productName"
-            onClick={() => {
-              console.log(product.id);
-              navigate(`/product/${product.id}`);
-            }}
+    if (product.type === "phone") {
+      return (
+        <div className="productContainer">
+          <div
+            onClick={() => navigate(`/product/${product.id}`)}
+            className="phoneContainer"
+            key={product.id}
           >
-            {product.name}
-          </h3>
-          <h4>{product.desc}</h4>
-          <h4 className="price">${product.price}</h4>
-          <img className="productImg" src={product.image} />
-          <button
-            onClick={() => handleAddToCart(product)}
-            className="addToCart"
-          >
-            Add to cart
-          </button>
+            <h3 className="productName">{product.name}</h3>
+            <h4>{product.desc}</h4>
+            <h4 className="price">${product.price}</h4>
+            <img className="productImg" src={product.image} />
+            <button
+              onClick={(e) => {
+                handleAddToCart(product);
+                e.stopPropagation();
+              }}
+              className="addToCart"
+            >
+              Add to cart
+            </button>
+          </div>
         </div>
-      </div>
-    );
+      );
+    }
   });
 
   return (
@@ -60,6 +61,7 @@ const Home = () => {
       ) : (
         <div className="sidebarListContainer">
           <div className="sidebar">
+            <h3>Brands</h3>
             <ul className="buttonsList">
               <li onClick={() => setDisp("All")}>
                 <button
@@ -75,7 +77,7 @@ const Home = () => {
                 </button>
               </li>
               <hr className="solid3" />
-              <li onClick={() => setDisp("iPhone")}>
+              <li onClick={() => setDisp("Apple")}>
                 <button
                   onClick={() => {
                     setcolor2("active");
@@ -85,7 +87,7 @@ const Home = () => {
                   }}
                   className={color2}
                 >
-                  iPhone
+                  Apple
                 </button>
               </li>
               <hr className="solid3" />
@@ -117,11 +119,12 @@ const Home = () => {
                 </button>
               </li>
               <hr className="solid3" />
+              <MenuNav />
             </ul>
           </div>
           <hr className="solid2" />
           <div className="listContainer">
-            <h2 className="productsHeader"> Products in our shop </h2>
+            <h2 className="productsHeader"> Phones in our shop </h2>
             <div className="elementsContainer">{list}</div>
           </div>
         </div>

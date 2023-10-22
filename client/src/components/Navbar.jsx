@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import { useState } from "react";
 import SearchIcon from "@mui/icons-material/Search";
 
-const Navbar = () => {
+const Navbar = ({ logo }) => {
   const { cartTotalQuantity } = useSelector((state) => state.cart);
   const navigate = useNavigate();
   const [form, setForm] = useState({
@@ -29,7 +29,16 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <Link className="link" to="/">
-        <h2 className="navbarTitle">YourPhone</h2>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+          }}
+        >
+          <img className="logo" src={logo} />
+          <h2 className="navbarTitle">YourMedia</h2>
+        </div>
       </Link>
       <form className="search" onSubmit={handleSearch}>
         <input
@@ -37,7 +46,7 @@ const Navbar = () => {
           value={form.search}
           id="search"
           name="search"
-          placeholder="Search by brand eg: Nokia, iPhone..."
+          placeholder="Search by brand or name eg: Nokia, Pro..."
           onChange={(e) => updateForm({ search: e.target.value })}
         />
         <button type="submit" className="searchIconBTN">

@@ -1,4 +1,3 @@
-import "./Navbar.css";
 import "./notFound.css";
 const NotFound = () => {
   return (
