@@ -6,7 +6,7 @@
 * Displaying products in shop
 * Adding products to cart
 * Removing products from cart
-* Increasing and decreasing quantity ot items in cart
+* Increasing and decreasing quantity of items in cart
 * Displaying total amount in cart
 * Searching products
 * Displaying product detail info
