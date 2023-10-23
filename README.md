@@ -8,7 +8,7 @@
 * Removing products from cart
 * Increasing and decreasing quantity ot items in cart
 * Displaying total amount in cart
-* Searching products by their brand name
+* Searching products
 * Displaying product detail info
 
 ## Description
